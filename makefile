@@ -1,8 +1,8 @@
-CXX = g++
+CXX = gcc
 CXXFLAGS = -Wall -Wextra -O2
 TARGET = nevvvbtc.out
-SRCS = nevvvbtc.cpp 
-OBJS = $(SRCS:.cpp=.o)
+SRCS = nevvvbtc.c
+OBJS = $(SRCS:.c=.o)
 
 all: $(TARGET)
 
