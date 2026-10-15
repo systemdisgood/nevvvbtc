@@ -1,16 +1,20 @@
-CXX = gcc
-CXXFLAGS = -Wall -Wextra -O2
-TARGET = nevvvbtc.out
-SRCS = nevvvbtc.c
-OBJS = $(SRCS:.c=.o)
+CC = gcc
+CFLAGS = -Wall -pedantic -std=c11
 
-all: $(TARGET)
+BINARIES = nevvvbtc
 
-$(TARGET): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
+SRCS = $(addsuffix .c, $(BINARIES))
+OBJS = $(addsuffix .o, $(BINARIES))
 
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+.PHONY: all clean
 
+all: $(BINARIES)
+
+
+%.out: %.o
+	$(CC) $(CFLAGS) $^ -o $@
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 clean:
-	rm -f $(OBJS) $(TARGET)
+	rm -f $(OBJS) $(BINARIES)
+
