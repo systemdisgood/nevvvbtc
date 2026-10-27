@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -pedantic -std=c11
 
-BINARIES = nevvvbtc
+BINARIES = nevvvbtc looper
 
 SRCS = $(addsuffix .c, $(BINARIES))
 OBJS = $(addsuffix .o, $(BINARIES))
