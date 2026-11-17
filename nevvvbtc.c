@@ -64,7 +64,7 @@ void mem_handler(mem_io* mem_io_inst)
 }
 
 
-int main()
+int main(void)
 {
 	int c;
 	char ch;
@@ -73,132 +73,126 @@ int main()
     while ((c = getchar()) != EOF) 
 	{
         ch = c < 0x100 ? (char)c: '\0';
-		if((ch >= '0') and (ch <= '9'))
-		{
-			mem_op = true;
-			mem_io_inst.addr_bit_to_set = ch - '0';
-			mem_io_inst.addr_bit_set = true;
-		}
 		switch(ch)
 		{
 			case 'A':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 10;
+				mem_io_inst.addr_bit_to_set = 0;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'B':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 11;
+				mem_io_inst.addr_bit_to_set = 1;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'C':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 12;
+				mem_io_inst.addr_bit_to_set = 2;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'D':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 13;
+				mem_io_inst.addr_bit_to_set = 3;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'E':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 14;
+				mem_io_inst.addr_bit_to_set = 4;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'F':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 15;
+				mem_io_inst.addr_bit_to_set = 5;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'G':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 16;
+				mem_io_inst.addr_bit_to_set = 6;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'H':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 17;
+				mem_io_inst.addr_bit_to_set = 7;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'I':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 18;
+				mem_io_inst.addr_bit_to_set = 8;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'J':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 19;
+				mem_io_inst.addr_bit_to_set = 9;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'K':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 20;
+				mem_io_inst.addr_bit_to_set = 10;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'L':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 21;
+				mem_io_inst.addr_bit_to_set = 11;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'M':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 22;
+				mem_io_inst.addr_bit_to_set = 12;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'N':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 23;
+				mem_io_inst.addr_bit_to_set = 13;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'O':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 24;
+				mem_io_inst.addr_bit_to_set = 14;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'P':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 25;
+				mem_io_inst.addr_bit_to_set = 15;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'Q':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 26;
+				mem_io_inst.addr_bit_to_set = 16;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'R':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 27;
+				mem_io_inst.addr_bit_to_set = 17;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'S':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 28;
+				mem_io_inst.addr_bit_to_set = 18;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'T':
 				is_op = true;
 				mem_op = true;
-				mem_io_inst.addr_bit_to_set = 29;
+				mem_io_inst.addr_bit_to_set = 19;
 				mem_io_inst.addr_bit_set = true;
 				break;
 			case 'u':
